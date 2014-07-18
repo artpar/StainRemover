@@ -1,1 +1,18 @@
-Android App to server as a "how to remove this kind of stain"
+There is one main activity there which has a list view
+Gets all the "stainfrom" column cursor
+Lists  it, so as soon as you open the app, you see a list
+<stainfrom> on <stainon>
+like
+oil on washable fabric
+
+Still have to figure out how the image will be there, the layout used in the list view has the <Image> but i have to set it dynamically
+the database has 6 columns
+
+_id, stainfrom, stainon, img, needs, steps, notes
+
+In the todo list, we have,
+1. click listener on the list item click
+2. new activity show, with the data from db, needs and steps
+probably would use a webview, since the steps and needs column has <li> in them
+3. set the images to show it
+that would complete the minimum viable product
