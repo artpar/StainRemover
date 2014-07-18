@@ -12,13 +12,13 @@ import android.widget.AdapterView;
 import android.widget.EditText;
 import android.widget.FilterQueryProvider;
 import android.widget.ListView;
-import android.widget.SimpleCursorAdapter;
+import com.parth.stainremover.nostain.adapter.CustomAdapter;
 import com.parth.stainremover.nostain.database.MySQLiteHelper;
 
 public class MainActivity extends ActionBarActivity
 {
 
-	private SimpleCursorAdapter adapter;
+	private CustomAdapter adapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
@@ -29,8 +29,8 @@ public class MainActivity extends ActionBarActivity
 		final MySQLiteHelper dbHelper = new MySQLiteHelper(this);
 		Cursor stainCursor = dbHelper.getAllSuggestedValues("");
 		this.adapter =
-		        new SimpleCursorAdapter(this, R.layout.list_item, stainCursor,
-		                new String[]{MySQLiteHelper.COLUMN_FROM}, new int[]{android.R.id.text1});
+		        new CustomAdapter(this, R.layout.list_item, stainCursor, new String[]{MySQLiteHelper.COLUMN_FROM},
+		                new int[]{android.R.id.text1});
 		listView.setAdapter(adapter);
 		EditText filter = (EditText) findViewById(R.id.filterText);
 		adapter.setFilterQueryProvider(new FilterQueryProvider()

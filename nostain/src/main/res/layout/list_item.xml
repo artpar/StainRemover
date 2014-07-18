@@ -1,34 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+    <TableRow>
 
-    <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
-               android:id="@+id/icon"
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:src="@drawable/img1"
-               android:layout_gravity="center_vertical"
-               android:layout_marginLeft="8dip"
-               android:contentDescription="@string/stainerIcon"
-               android:layout_marginRight="-8dip"
-               android:layout_marginTop="8dip"
-               android:layout_marginBottom="8dip"
-               android:scaleType="centerInside"
-               android:duplicateParentState="true"/>
+        <ImageView
+            android:id="@+id/image"
+            android:src="@drawable/img1"
+            android:layout_width="50dp"
+            android:contentDescription="@string/stainerIcon"
+            android:layout_height="50dp"/>
 
-    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
-              android:id="@android:id/text1"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:textAppearance="?android:attr/textAppearanceListItemSmall"
-              android:gravity="center_vertical"
-              android:paddingStart="?android:attr/listPreferredItemPaddingStart"
-              android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
-              android:minHeight="?android:attr/listPreferredItemHeightSmall"
-        />
-
-
-</LinearLayout>
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"/>
+    </TableRow>
+</TableLayout>
