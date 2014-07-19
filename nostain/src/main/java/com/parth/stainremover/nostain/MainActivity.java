@@ -1,5 +1,6 @@
 package com.parth.stainremover.nostain;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -73,8 +74,11 @@ public class MainActivity extends ActionBarActivity
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
 			{
+                Intent intent = null;
+                // If network available goto Store else take user to Library.
+                intent = new Intent(getApplicationContext(), StainData.class);
 
-			}
+            }
 		});
 	}
 

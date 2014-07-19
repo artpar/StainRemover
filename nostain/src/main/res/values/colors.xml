@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="warning_color">#FF0000</color>
+    <color name="needs_color">#004400</color>
+    <color name="steps_color">#000066</color>
+</resources>
