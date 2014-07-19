@@ -74,11 +74,14 @@ public class MainActivity extends ActionBarActivity
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
 			{
-                Intent intent = null;
-                // If network available goto Store else take user to Library.
-                intent = new Intent(getApplicationContext(), StainData.class);
-
-            }
+				Intent intent = null;
+				// If network available goto Store else take user to Library.
+				intent = new Intent(getApplicationContext(), StainData.class);
+				Bundle bundle = new Bundle();
+				bundle.putLong("item", adapterView.getItemIdAtPosition(i));
+				intent.putExtras(bundle);
+				startActivity(intent);
+			}
 		});
 	}
 
